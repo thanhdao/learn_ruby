@@ -15,19 +15,19 @@ end
 
 # Mr Linh's code
 
-# def fibonacci(n)
-#  raise RuntimerError.new("number: #{n} must be Integer") if (!n.is_a?(Integer) || n <= 0) 
-#  return 1 if [0, 1].include? n
-#  number_1 = 1
-#  number_2 = 1
-#  new_number = 2
-#  (3..n).each do
-#    number_1 = number_2
-#    number_2 = new_number
-#    new_number = number_1 + number_2
-#  end
-#  new_number
-# end
+def fibonacci2(n)
+ raise RuntimerError.new("number: #{n} must be Integer") if (!n.is_a?(Integer) || n <= 0) 
+ return 1 if [0, 1].include? n
+ number_1 = 1
+ number_2 = 1
+ new_number = 2
+ (3..n-1).each do
+   number_1 = number_2
+   number_2 = new_number
+   new_number = number_1 + number_2
+ end
+ new_number
+end
 
 
 # def fibonacci(n)
@@ -45,3 +45,4 @@ end
 puts " Fibonacci order: "
 n = gets.to_i
 puts "Fibonnaci: #{fibonacci(n)}"
+p "Fibonnaci 2 : #{fibonacci2(n)}"
